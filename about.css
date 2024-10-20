@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 5px 0;
+}
+
+.nav-btn,
+.auth-btn {
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.nav-btn {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.nav-btn:hover {
+    background-color: #FF6600;
+    color: #FFFFFF;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+    width: 270px;
+}
+
+.search-input {
+    padding: 8px 40px 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 18px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #FF6600;
+}
+
+.search-button {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #FF6600;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+.search-button:hover {
+    color: #060A16;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-btn {
+    color: #FFFFFF;
+    background-color: #FF6600;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+}
+
+/* .auth.login-btn:hover {
+    background-color: #060A16;
+} */
+
+.login-btn {
+    background-color: #060A16;
+    /* Green background */
+}
+
+.signup-btn {
+    background-color: #FF6600;
+    /* Blue background */
+}
+
+/* Mobile view styles */
+@media screen and (max-width: 768px) {
+    .auth-buttons {
+        width: 100%;
+    }
+
+    .auth-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-input {
+        font-size: 16px;
+        padding: 8px 40px 8px 12px;
+    }
+
+    .search-button {
+        right: 2px;
+        padding: 6px;
+    }
+
+    .search-button i {
+        font-size: 14px;
+    }
+}
+
+
+
+
+main {
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.about-section {
+    margin-bottom: 20px;
+    font: bolder;
+    font-size: xx-large;
+    color: #FF6600;
+    padding: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    text-align: center;
+    background-image: url(/slide2.webp);
+
+}
+.about-section1 h1{
+    font-style: italic;
+    font-size: 30px;
+    color: #FF6600;
+    font-display: bold;
+}
+.about-section1 {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    background-color: rgba(255, 102, 0, 0.4);
+
+}
+
+.about-section2{
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+}
+
+
+.team-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+}
+
+.team-info {
+    flex: 1; /* Allow the text container to take available space */
+    margin-right: 20px; /* Add some space between text and image */
+}
+
+
+
+.team-image img {
+    /* margin-top: auto; */
+    width: 600px; /* Set the width of the image */
+    height: 400px; /* Set the height of the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+
+
+  /* Footer styles */
+  footer {
+    background-color: #060A16;
+    color: white;
+  }
+  
+  footer a {
+    color: #FF6600;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+  
+  /* Replace placeholder SVGs with colored divs */
+  .bd-placeholder-img {
+    background-color: var(--royal-blue);
+    
+    /* background-image: url('slide2.webp'); */
+  }
+  
+  .rounded-circle {
+    background-color: var(--orange);
+  }
+  
+  .featurette-image {
+    background-color: var(--royal-blue);
+  }
+
+
+  .button-color{
+    background-color: var(--orange);
+    /* border-color: var(--orange); */
+  }
+
+
+  .text-color{
+    color: #FF6600;
+  }
+
+  html{
+    scroll-behavior: smooth;
+    margin: 0;
+  }
+
+
+
+
+

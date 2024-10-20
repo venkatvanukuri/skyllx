@@ -1,0 +1,341 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    /* Removes bullet points */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 5px 0;
+}
+
+.nav-btn,
+.auth-btn {
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.nav-btn {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.nav-btn:hover {
+    background-color: #FF6600;
+    color: #FFFFFF;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+    width: 270px;
+}
+
+.search-input {
+    padding: 8px 40px 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 18px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #FF6600;
+}
+
+.search-button {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #FF6600;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+.search-button:hover {
+    color: #060A16;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-btn {
+    color: #FFFFFF;
+    background-color: #FF6600;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+}
+
+/* .auth.login-btn:hover {
+    background-color: #060A16;
+} */
+
+.login-btn {
+    background-color: #060A16;
+    /* Green background */
+}
+
+.signup-btn {
+    background-color: #FF6600;
+    /* Blue background */
+}
+
+/* Mobile view styles */
+@media screen and (max-width: 768px) {
+    .auth-buttons {
+        width: 100%;
+    }
+
+    .auth-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-input {
+        font-size: 16px;
+        padding: 8px 40px 8px 12px;
+    }
+
+    .search-button {
+        right: 2px;
+        padding: 6px;
+    }
+
+    .search-button i {
+        font-size: 14px;
+    }
+}
+
+.carousel {
+    --carousel-control-color: #fff;
+    --carousel-control-width: 15%;
+    --carousel-control-opacity: 0.5;
+    --carousel-control-hover-opacity: 0.9;
+    --carousel-control-transition: opacity 0.15s ease;
+
+    --carousel-indicator-width: 30px;
+    --carousel-indicator-height: 3px;
+    --carousel-indicator-hit-area-height: 10px;
+    --carousel-indicator-spacer: 3px;
+    --carousel-indicator-opacity: 0.5;
+    --carousel-indicator-active-bg: #fff;
+    --carousel-indicator-active-opacity: 1;
+    --carousel-indicator-transition: opacity 0.6s ease;
+
+    --carousel-caption-width: 70%;
+    --carousel-caption-color: #fff;
+    --carousel-caption-padding-y: 1.25rem;
+    --carousel-caption-spacer: 1.25rem;
+
+    --carousel-control-icon-width: 2rem;
+
+    --carousel-control-prev-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    --carousel-control-next-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+    --carousel-transition-duration: 0.6s;
+
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    transition: transform var(--carousel-transition-duration) ease-in-out;
+    height: 100%;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: auto; /* Adjust height for mobile if needed */
+    }
+}
+
+/* Rest of the CSS remains the same */
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --orange: #FF6600;
+    --royal-blue: #060A16;
+  }
+  
+  body {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  /* Carousel styles */
+  .carousel-item {
+    background-color: var(--royal-blue);
+    /* background-image: url('slide2.webp'); */
+  }
+  
+  .carousel-caption {
+    color: var(--white);
+  }
+  
+  .btn-primary {
+    background-color: var(--orange);
+    border-color: var(--orange);
+  }
+  
+  .btn-primary:hover {
+    background-color: darken(var(--orange), 10%);
+    border-color: darken(var(--orange), 10%);
+  }
+  
+  /* Marketing section styles */
+  .marketing h2 {
+    color: var(--royal-blue);
+  }
+  
+  .btn-secondary {
+    background-color: var(--orange);
+    border-color: var(--orange);
+  }
+  
+  .btn-secondary:hover {
+    background-color: darken(var(--orange), 10%);
+    border-color: darken(var(--orange), 10%);
+  }
+  
+  /* Featurette styles */
+  .featurette-heading {
+    color: var(--royal-blue);
+  }
+  
+  .text-body-secondary {
+    color: var(--orange) !important;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: var(--royal-blue);
+    color: var(--white);
+  }
+  
+  footer a {
+    color: var(--orange);
+  }
+  
+  footer a:hover {
+    color: lighten(var(--orange), 10%);
+  }
+  
+  /* Replace placeholder SVGs with colored divs */
+  .bd-placeholder-img {
+    background-color: var(--royal-blue);
+    
+    /* background-image: url('slide2.webp'); */
+  }
+  
+  .rounded-circle {
+    background-color: var(--orange);
+  }
+  
+  .featurette-image {
+    background-color: var(--royal-blue);
+  }
+
+
+  .button-color{
+    background-color: var(--orange);
+    /* border-color: var(--orange); */
+  }
+
+
+  .text-color{
+    color: var(--orange);
+  }
+
+  html{
+    scroll-behavior: smooth;
+    margin: 0;
+  }
